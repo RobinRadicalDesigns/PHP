@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+
+   <h2>Welcome to Array</h2>
+    <h2>
+    <?php
+    
+    $indexarray = ["Robin","Dhaka","PHP"];
+    $indexarray2 = ["Rion","Adabor","HTML"];
+    $indexarray3 = ["Robin","Mohammadpur","CSS"];
+    $indexarray[0] = "HyperFreakZ";
+    $indexarray[] = "JavaScript";
+    
+    echo $indexarray[0];
+    
+    $newindexarray = array_merge($indexarray,$indexarray2,$indexarray3);
+    
+    echo "<pre>";
+    
+    print_r($newindexarray);
+        
+    $associativearray = array(
+        'name' => 'Robin',
+        'city' => 'Dhaka',
+        'likes' => 'PHP'
+    );
+    
+    print_r($associativearray);
+    echo "<br>";    
+    echo $associativearray['name'];
+    echo "<br>";
+    echo "<br>";
+        
+    $multidimensionarray = array(
+        'one' => array(
+        'name' => 'Robin',
+        'city' => 'Dhaka',
+        'likes' => 'PHP'
+        ),
+        'two' =>array(
+        'name' => 'Rion',
+        'city' => 'Adabor',
+        'likes' => 'HTML'
+        )
+    );
+    
+    print_r($multidimensionarray);
+    echo "<br>"; 
+    print_r($multidimensionarray['one']);
+    echo "<br>"; 
+    print_r($multidimensionarray['two']['name']);
+    echo "<br>"; 
+    echo $multidimensionarray['two']['likes'];
+        
+    ?>
+    </h2>
+</body>
+</html>
