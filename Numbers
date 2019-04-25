@@ -23,7 +23,11 @@ S - Substration
 $number = 12;
 $number2 = 1.6;
 
-echo $data = 1 + ($number2 - 5) * 7 / 4**2;
+echo ++$number;
+echo "<br>";
+echo --$number;
+echo "<br>";
+echo $data = 1 + ($number - 5) * 7 / 4**2;
 echo "<br>";
 echo floor($number2);
 echo "<br>";
