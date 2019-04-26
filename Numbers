@@ -29,11 +29,22 @@ echo --$number;
 echo "<br>";
 echo $data = 1 + ($number - 5) * 7 / 4**2;
 echo "<br>";
-echo floor($number2);
+echo floor($number2); /* to get a solid number below*/
 echo "<br>";
-echo ceil($number2);
+echo ceil($number2); /* to get a solid number up*/
 echo "<br>";
 echo pi();
+echo "<br>";
+       
+$number3 = 26;
+$number3 = $number3 + 1;
+echo $number3;
+echo "<br>";
+echo $number3 = 26 * 10;
+echo "<br>";
+echo $number3 *= 20;
+echo "<br>";
+echo $number3 /= 13;
 
 ?>
     </h2>
