@@ -11,7 +11,7 @@
     
     for(
         $count = 0;
-        $count < 11;
+        $count <= 10;
         $count ++
         )
         {
@@ -37,8 +37,76 @@
         {
             echo $count1 . "</br>";
         }
+        echo "</br>";
+        echo "</br>";
+        
+    $products = [
+        ['name' => 'Keyboard', 'price' => 300],
+        ['name' => 'Mouse', 'price' => 100],
+        ['name' => 'Headphone', 'price' => 700],
+        ['name' => 'Controller', 'price' => 500],
+    ];
+        
+    foreach( $products as $pc )
+        
+        echo "<li>" . $pc['name'] . "'s Price is - " . "<span style='color:red;'>" . $pc['price'] . " Tk </span>" . "</li>";
+        
+    $users = ['Robin', 'Rony', 'Sajib', 'Babu'];     
+    
+    ?>
+    </h2>
+    
+    <h2>Admins</h2>
+    <h3>
+      <ul>
+       <?php
+          foreach ( $users as $count => $admins ) { ?>
+          <li><?php print $admins . "<span style='color:red;'> is the Admin no - </span>" . $count ?></li>
+          <?php }
+        
+        echo "</br>";
+      
+          
+        ?>
+       
+      </ul>
+    </h3>
+    
+    <h2>
+    <?php
+          echo "If the logic is true it show (1), If false then it wont show anything = ";
+           echo 'r' > 'R';  
+        
+        echo "</br>";
+        echo "</br>";
+    ?>
+    <?php
+          echo "If the logic is true it show (1), If false then it wont show anything = ";
+           echo 2 > 4;      
+    ?>
+    
+    <?php
+        echo "</br>";
+        echo "</br>";
+        
+        $year = 2019;
+        
+        if ( $year == 2020 ) {
+            echo "Next year it will be 2020";
+        }
+        else if ( $year == 2019 ) {
+            echo "Have a Nice " . $year;
+        }
+        else if ( $year == 2018 ) {
+            echo "Hope you had a good year";
+        }
+        else {
+            echo "Wrong!";
+        }
+            
         
     ?>
+    
     </h2>
 </body>
 </html>
