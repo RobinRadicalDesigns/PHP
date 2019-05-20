@@ -1,0 +1,33 @@
+<?php
+
+$global = "Global Variable";
+
+function localvariable()
+{
+    $local = "Local Variable";
+    global $global;
+    $global = "New Global Variable";
+    return $global;
+} 
+
+echo localvariable();
+
+echo "<br>";
+
+echo $global;
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variables</title>
+</head>
+<body>
+
+   
+     
+    
+</body>
+</html>
