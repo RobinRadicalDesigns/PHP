@@ -1,0 +1,98 @@
+<?php
+
+$error = ['name_error'=>'', 'number_error'=>'', 'subject_error'=>'', 'message_error'=>'' ];
+
+if ( isset ( $_POST ['submit'] ) ) {
+
+    $name       = htmlspecialchars ( $_POST['user_name'] ) ?? "";
+    $number     = htmlspecialchars ( $_POST['mobile_number'] ) ?? "";
+    $subject    = htmlspecialchars ( $_POST['subject'] ) ?? "";
+    $message    = htmlspecialchars ( $_POST['body_text'] ) ?? "";
+
+if ( empty ( $name ) ){
+    $error ['name_error'] = "Please Enter Your Name";
+}
+
+if ( empty ( $number ) ){
+    $error ['number_error'] = "Please Enter Your Mobile Number";
+}
+
+if ( empty ( $subject ) ){
+    $error ['subject_error'] = "Please Enter Subject";
+}
+
+if ( empty ( $message ) ){
+    $error ['message_error'] = "Please Enter Your Message";
+}
+}
+
+?>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="col-md-3"></div>
+
+                <div class="col-md-6" style="display:block; margin: 0 auto;">
+
+                    <h1 class="text-center">Contact Us</h1>
+                    <form action="form.php" method="POST">
+
+                        <div class="form-group">
+                            <label for="user_name">Name</label>
+                            <input type="text" name="user_name" id="user_name" class="form-control" value="<?=$name ?? "" ?>">    
+                            <span style="color:red;"> <?= $error['name_error'] ?> </span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mobile_number">Mobile Number</label>
+                            <input type="text" name="mobile_number" id="mobile_number" class="form-control" value="<?=$number ?? "" ?>">
+                            <span style="color:red;"> <?= $error['number_error'] ?> </span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" name="subject" id="subject" class="form-control" value="<?=$subject ?? "" ?>">
+                            <span style="color:red;"> <?= $error['subject_error'] ?> </span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="body_text">Your Message</label>
+                            <textarea name="body_text" id="body_text" rows="6" class="form-control">
+                            <?=$message ?? "" ?>
+                            </textarea>
+                            <span style="color:red;"> <?= $error['message_error'] ?> </span>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <input type="submit" name="submit" value="Send Message" class="btn btn-primary">
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <div class="col-md-3"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
